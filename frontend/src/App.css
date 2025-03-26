@@ -8,11 +8,15 @@
 /* colors and variables */
 :root {
     --bg-color: #1e1e1e;
-    --text-color: #000;
+    --text-color: #fff;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 .app {
-    background: var(--bg-color);
     width: 100vw;
     height: 100vh;
 }

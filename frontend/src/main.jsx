@@ -14,7 +14,6 @@ import CreateGame from './components/game/createGame.jsx'
 import JoinGame from './components/game/joinGame.jsx'
 import PlayGame from './components/game/playGame.jsx'
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

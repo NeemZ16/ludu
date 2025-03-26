@@ -1,3 +1,6 @@
+/**
+ * Join game through code
+ */
 function JoinGame() {
 
     return (

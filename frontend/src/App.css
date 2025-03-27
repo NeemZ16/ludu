@@ -23,6 +23,7 @@ body {
 
 a {
     color: var(--light-blue);
+    width: fit-content;
 }
 
 form {
@@ -48,10 +49,17 @@ input[type='submit'] {
     padding: var(--btn-padding);
     color: #fff;
     text-decoration: none;
-    background: var(--purple);
+    background-color: var(--purple);
     border-radius: 100px;
     border: none;
     font-size: 1rem;
+    cursor: pointer;
+}
+
+a.btn:active,
+input[type='submit']:active {
+    background-color: var(--light-purple);
+    transition: background-color 125ms ease-in-out;
 }
 
 input[type='submit'] {

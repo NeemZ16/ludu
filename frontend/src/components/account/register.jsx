@@ -26,7 +26,7 @@ function Register() {
 
     return (
         <div className="acct-wrapper">
-            <Link to="/">
+            <Link to="/" id="logo">
                 <img src="/logo.svg" alt="Ludu Online logo" />
             </Link>
             <form onSubmit={handleSubmit}>

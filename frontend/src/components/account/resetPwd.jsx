@@ -1,7 +1,12 @@
 import { useState } from "react";
 
-function Login() {
-    const [formData, setFormData] = useState({})
+/**
+ * Send new password and time sensitive resetToken from query param to reset pwd endpoint
+ * 
+ */
+function ResetPwd() {
+    const queryParams = new URLSearchParams(window.location.search)
+    const [formData, setFormData] = useState({"resetToken": queryParams.get("token")})
 
     const handleChange = (e) => {
         const id = e.target.id;
@@ -11,7 +16,7 @@ function Login() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        const submitURL = "/api/login"
+        const submitURL = "/api/forgot-pwd"
 
         fetch(submitURL, {
             method: "POST",
@@ -26,17 +31,13 @@ function Login() {
         <div className="acctMgmtWrapper">
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
-                    <label htmlFor="username">Username:</label>
-                    <input type="text" id="username" onChange={handleChange}/>
+                    <label htmlFor="email">Email:</label>
+                    <input type="text" id="email" onChange={handleChange} />
                 </div>
-                <div className="input-group">
-                    <label htmlFor="password">Password:</label>
-                    <input type="text" id="password" onChange={handleChange}/>
-                </div>
-                <input type="submit" value="log in" />
+                <input type="submit" value="register" />
             </form>
         </div>
     )
 }
 
-export default Login
+export default ResetPwd

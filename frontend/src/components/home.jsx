@@ -1,10 +1,13 @@
+import { Link } from 'react-router'
+
 /**
- * Home page for the app. Shows options to start/join game.
+ * Home page shows options to start/join game.
  */
 function Home() {
   return (
     <>
-      home page
+      <Link to="/game">Create New Game</Link>
+      <Link to="/game/join">Join with Code</Link>
     </>
   )
 }

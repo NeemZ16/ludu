@@ -4,9 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import './index.css'
 
 import App from './App.jsx'
+import NotFound from './components/404notfound.jsx'
 import Login from './components/account/login.jsx'
 import Register from './components/account/register.jsx'
 import ForgotPwd from './components/account/forgotPwd.jsx'
+import ResetPwd from './components/account/resetPwd.jsx'
 import Settings from './components/account/settings.jsx'
 import Profile from './components/user/profile.jsx'
 import ViewProfile from './components/user/viewProfile.jsx'
@@ -22,12 +24,14 @@ createRoot(document.getElementById('root')).render(
         <Route path="/login" element={< Login />} />
         <Route path="/register" element={< Register />} />
         <Route path="/forgot-pwd" element={< ForgotPwd />} />
+        <Route path="/reset-pwd" element={< ResetPwd />} />
         <Route path="/settings" element={< Settings />} />
         <Route path="/user" element={< Profile />} />
         <Route path="/user/:userID" element={< ViewProfile />} />
         <Route path="/game" element={< CreateGame />} />
         <Route path="/game/join" element={< JoinGame />} />
         <Route path="/game/:gameID" element={< PlayGame />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

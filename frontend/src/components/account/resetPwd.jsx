@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from 'react-router'
 import './account.css'
 
 /**
@@ -30,7 +31,9 @@ function ResetPwd() {
 
     return (
         <div className="acct-wrapper">
-            <img src="/logo.svg" alt="Ludu Online logo" />
+            <Link to="/">
+                <img src="/logo.svg" alt="Ludu Online logo" />
+            </Link>
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="password">Password:</label>

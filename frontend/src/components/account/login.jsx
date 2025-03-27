@@ -26,7 +26,9 @@ function Login() {
 
     return (
         <div className="acct-wrapper">
-            <img src="/logo.svg" alt="Ludu Online logo" />
+            <Link to="/">
+                <img src="/logo.svg" alt="Ludu Online logo" />
+            </Link>
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="username">Username:</label>

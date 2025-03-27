@@ -1,5 +1,7 @@
+@import url('../../index.css');
+
 .acct-wrapper {
-    background: #353535;
+    background: var(--bg-secondary);
     width: 50%;
     max-width: 400px;
     min-width: fit-content;

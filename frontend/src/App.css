@@ -1,24 +1,4 @@
-/* css reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* colors and variables */
-:root {
-    --bg-color: #1e1e1e;
-    --text-color: #fff;
-    --red: #ac0000;
-    --yellow: #d6ba00;
-    --blue: #0058c3;
-    --green: #419600;
-    
-    --purple: #531793;
-    --light-blue: #7da9e0;
-
-    --btn-padding: 5px 10px;
-}
+@import url('index.css');
 
 body {
     background: var(--bg-color);

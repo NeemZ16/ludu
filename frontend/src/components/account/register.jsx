@@ -26,6 +26,7 @@ function Register() {
 
     return (
         <div className="acct-wrapper">
+            <img src="/logo.svg" alt="Ludu Online logo" />
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="username">Username:</label>
@@ -39,7 +40,7 @@ function Register() {
                     <label htmlFor="conf-password">Confirm Password:</label>
                     <input type="text" id="conf-password" onChange={handleChange}/>
                 </div>
-                <input type="submit" value="register" />
+                <input type="submit" value="Register" />
                 <Link to="/login">Already have an account? Log in</Link>
             </form>
         </div>

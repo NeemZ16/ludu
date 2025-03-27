@@ -29,12 +29,13 @@ function ForgotPwd() {
 
     return (
         <div className="acct-wrapper">
+            <img src="/logo.svg" alt="Ludu Online logo" />
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="email">Email:</label>
                     <input type="text" id="email" onChange={handleChange} />
                 </div>
-                <input type="submit" value="send reset link" />
+                <input type="submit" value="Send Reset Link" />
             </form>
         </div>
     )

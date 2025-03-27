@@ -26,6 +26,7 @@ function Login() {
 
     return (
         <div className="acct-wrapper">
+            <img src="/logo.svg" alt="Ludu Online logo" />
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="username">Username:</label>
@@ -35,7 +36,7 @@ function Login() {
                     <label htmlFor="password">Password:</label>
                     <input type="text" id="password" onChange={handleChange}/>
                 </div>
-                <input type="submit" value="log in" />
+                <input type="submit" value="Log In" />
                 <Link to="/register">Don't have an account? Register</Link>
                 <Link to="/forgot-pwd">Forgot Password</Link>
             </form>

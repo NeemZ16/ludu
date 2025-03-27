@@ -30,12 +30,17 @@ function ResetPwd() {
 
     return (
         <div className="acct-wrapper">
+            <img src="/logo.svg" alt="Ludu Online logo" />
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
-                    <label htmlFor="email">Email:</label>
-                    <input type="text" id="email" onChange={handleChange} />
+                    <label htmlFor="password">Password:</label>
+                    <input type="text" id="password" onChange={handleChange} />
                 </div>
-                <input type="submit" value="register" />
+                <div className="input-group">
+                    <label htmlFor="conf-password">Confirm Password:</label>
+                    <input type="text" id="conf-password" onChange={handleChange} />
+                </div>
+                <input type="submit" value="Reset Password" />
             </form>
         </div>
     )

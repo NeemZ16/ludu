@@ -5,10 +5,10 @@ import { Link } from 'react-router'
  */
 function Home() {
   return (
-    <>
-      <Link to="/game">Create New Game</Link>
-      <Link to="/game/join">Join with Code</Link>
-    </>
+    <div className="center-page">
+      <Link to="/game" className='btn'>Create New Game</Link>
+      <Link to="/game/join" className='btn'>Join with Code</Link>
+    </div>
   )
 }
 

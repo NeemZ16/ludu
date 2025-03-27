@@ -9,14 +9,39 @@
 :root {
     --bg-color: #1e1e1e;
     --text-color: #fff;
+    --red: #ac0000;
+    --yellow: #d6ba00;
+    --blue: #0058c3;
+    --green: #419600;
+    --purple: #470098;
+
+    --btn-padding: 5px 10px;
 }
 
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .app {
     width: 100vw;
     height: 100vh;
+}
+
+.center-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+a.btn {
+    padding: var(--btn-padding);
+    color: #fff;
+    text-decoration: none;
+    background: var(--purple);
+    border-radius: 100px;
 }

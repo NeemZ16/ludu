@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState } from "react"
+import { Link } from 'react-router'
+import './account.css'
 
 function Login() {
     const [formData, setFormData] = useState({})
@@ -23,7 +25,7 @@ function Login() {
     }
 
     return (
-        <div className="acctMgmtWrapper">
+        <div className="acct-wrapper">
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="username">Username:</label>
@@ -34,6 +36,8 @@ function Login() {
                     <input type="text" id="password" onChange={handleChange}/>
                 </div>
                 <input type="submit" value="log in" />
+                <Link to="/register">Don't have an account? Register</Link>
+                <Link to="/forgot-pwd">Forgot Password</Link>
             </form>
         </div>
     )

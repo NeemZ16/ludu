@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from "react"
+import './account.css'
 
 /**
  * Ask for email and send link to resetPwd with time sensitive resetToken in query param
@@ -27,13 +28,13 @@ function ForgotPwd() {
     }
 
     return (
-        <div className="acctMgmtWrapper">
+        <div className="acct-wrapper">
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="email">Email:</label>
                     <input type="text" id="email" onChange={handleChange} />
                 </div>
-                <input type="submit" value="register" />
+                <input type="submit" value="send reset link" />
             </form>
         </div>
     )

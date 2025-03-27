@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState } from "react"
+import { Link } from 'react-router'
+import './account.css'
 
 function Register() {
     const [formData, setFormData] = useState({})
@@ -23,7 +25,7 @@ function Register() {
     }
 
     return (
-        <div className="acctMgmtWrapper">
+        <div className="acct-wrapper">
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="username">Username:</label>
@@ -38,6 +40,7 @@ function Register() {
                     <input type="text" id="conf-password" onChange={handleChange}/>
                 </div>
                 <input type="submit" value="register" />
+                <Link to="/login">Already have an account? Log in</Link>
             </form>
         </div>
     )

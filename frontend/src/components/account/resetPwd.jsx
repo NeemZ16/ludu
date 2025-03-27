@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from "react"
+import './account.css'
 
 /**
  * Send new password and time sensitive resetToken from query param to reset pwd endpoint
@@ -28,7 +29,7 @@ function ResetPwd() {
     }
 
     return (
-        <div className="acctMgmtWrapper">
+        <div className="acct-wrapper">
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="email">Email:</label>

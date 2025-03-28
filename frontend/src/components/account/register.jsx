@@ -13,8 +13,9 @@ function Register() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        const submitURL = "/api/register"
+        const submitURL = "http://localhost:8000/register"
 
+        console.log(JSON.stringify(formData))
         fetch(submitURL, {
             method: "POST",
             headers: {

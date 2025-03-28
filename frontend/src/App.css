@@ -63,5 +63,6 @@ input[type='submit']:active {
 }
 
 input[type='submit'] {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }

@@ -1,6 +1,8 @@
 import { Link } from 'react-router'
 
 function Landing() {
+  // landing page only shown when no auth token present
+
   return (
     <div className="center-page">
       <img src="logo.svg" alt="Ludu Online logo" />

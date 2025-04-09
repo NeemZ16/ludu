@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+*:focus-visible {
+    outline: none;
+    box-shadow: 0 0 10px 1px var(--light-blue);
+}
+
 /* colors and variables */
 :root {
     --bg-color: #1e1e1e;
@@ -17,6 +22,7 @@
     
     --purple: #5c3787;
     --light-purple: #7e41bf;
+    --dark-purple: #4a2b6d;
     --light-blue: #7da9e0;
 
     --btn-padding: 5px 10px;

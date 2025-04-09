@@ -56,10 +56,16 @@ input[type='submit'] {
     cursor: pointer;
 }
 
+a.btn:hover,
+input[type='submit']:hover {
+    background-color: var(--dark-purple);
+    transition: background-color 125ms ease-in-out;
+}
+
 a.btn:active,
 input[type='submit']:active {
-    background-color: var(--light-purple);
-    transition: background-color 125ms ease-in-out;
+    background-color: var(--purple);
+    transition: background-color 50ms ease-in-out;
 }
 
 input[type='submit'] {

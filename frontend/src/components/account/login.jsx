@@ -13,10 +13,11 @@ function Login() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        const submitURL = "/api/login"
-
+        const submitURL = import.meta.env.VITE_API_URL + "/login"
+        
         fetch(submitURL, {
             method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             },

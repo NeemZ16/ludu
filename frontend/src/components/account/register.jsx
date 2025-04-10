@@ -13,11 +13,11 @@ function Register() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        const submitURL = "http://localhost:8000/register"
+        const submitURL = import.meta.env.VITE_API_URL + "/register"
 
-        console.log(JSON.stringify(formData))
         fetch(submitURL, {
             method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             },

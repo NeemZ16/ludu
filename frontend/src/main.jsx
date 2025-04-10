@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
 import App from './App.jsx'
-import NotFound from './components/404notfound.jsx'
+import NotFound from './components/404NotFound.jsx'
 import Login from './components/account/login.jsx'
 import Register from './components/account/register.jsx'
 import ForgotPwd from './components/account/forgotPwd.jsx'

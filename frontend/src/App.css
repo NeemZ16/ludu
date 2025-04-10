@@ -58,7 +58,7 @@ input[type='submit'] {
 
 a.btn:hover,
 input[type='submit']:hover {
-    background-color: var(--dark-purple);
+    background-color: var(--light-purple);
     transition: background-color 125ms ease-in-out;
 }
 

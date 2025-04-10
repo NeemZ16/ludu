@@ -1,4 +1,4 @@
-serve-backend:
+backend:
 	cd backend && make serve
 
 setup-frontend:
@@ -12,4 +12,4 @@ start:
 	cd frontend && npm run dev
 
 # one-liner setup + run
-dev: serve-backend setup-frontend dev-frontend
+dev: backend setup-frontend dev-frontend

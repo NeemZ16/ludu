@@ -1,0 +1,37 @@
+services:
+  api:
+    container_name: ludu-api
+    build:
+      context: .
+      dockerfile: api.Dockerfile
+    environment:
+      FRONTEND: http://localhost:8080
+    ports:
+      - 8000:8000
+  
+  client:
+    container_name: ludu-client
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+    volumes:
+      - client-dist:/app/dist
+    ports:
+      - 8080:8080
+  
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    volumes:
+      - client-dist:/usr/share/nginx/html
+    command: >
+      /bin/sh -c "echo 'Frontend is now accessible at http://localhost:8080' && nginx -g 'daemon off;'"
+    depends_on:
+      client:
+        condition: service_completed_successfully
+    ports:
+      - '8080:80'
+
+volumes:
+  client-dist:

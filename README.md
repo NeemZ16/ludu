@@ -18,7 +18,7 @@ cd ludu
 docker compose up
 ```
 
-### option 2 - Go and Node
+### option 2 - Makefile
 prerequisites:
 - install Go (v1.23)
 - install Node.js (v20.11)
@@ -26,6 +26,5 @@ prerequisites:
 ```
 git clone https://github.com/NeemZ16/ludu.git
 cd ludu
-go run backend/cmd/ludu/main.go
-cd frontend && npm install && npm run dev
+make dev
 ```

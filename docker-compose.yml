@@ -1,11 +1,21 @@
 services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: ludu_db
+      POSTGRES_USER: ludu_user
+      POSTGRES_PASSWORD: ludu_pwd
+    ports:
+      - '5432:5432'
+    restart: unless-stopped
+
   api:
     container_name: ludu-api
     build:
       context: .
       dockerfile: api.Dockerfile
     environment:
-      FRONTEND: http://localhost:8080
+      WAIT_HOSTS: db:5432
     ports:
       - 8000:8000
   

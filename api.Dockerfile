@@ -14,6 +14,10 @@ COPY ./backend/internal ./internal
 # build go binary in root path
 RUN CGO_ENABLED=0 GOOS=linux go build -o /ludu-backend ./cmd/ludu
 
+# wait for db
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+
 # expose port and run binary
 EXPOSE 8000
-CMD ["/ludu-backend"]
+CMD ["/wait", "--", "/ludu-backend"]
